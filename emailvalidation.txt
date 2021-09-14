@@ -1,0 +1,35 @@
+package emailidassignment;
+import java.util.Scanner;
+
+public class emailvalidation {
+	public boolean isValid(String email) {
+		String [] list = new String[] {"email1@gmail.com","email2@gmail.com","email3@gmail.com",
+				"email4@gmail.com","email5@gmail.com","email6@gmail.com","email7@gmail.com","email8@gmail.com",
+				"email9@gmail.com","email10@gmail.com"};
+		boolean status = true;
+		int sizeOfList = list.length;
+		for(int i=0; i<sizeOfList;i++) {
+			if(list[i].equals(email)) {
+				status = true;
+				break;
+				}
+			else
+				status = false;
+			}
+		return status;
+	}
+
+	public static void main(String[] args) {
+		emailvalidation emailvalidation = new emailvalidation();
+		Scanner Scanner = new Scanner(System.in);
+		System.out.println("enter your email!");
+		String email = Scanner.next();
+		boolean isValid = emailvalidation.isValid(email);
+		if(isValid)
+			System.out.println("email is valid !");
+		else
+			System.out.println("email is not valid try again !");
+		Scanner.getClass();
+		}
+
+}
